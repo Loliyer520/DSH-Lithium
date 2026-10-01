@@ -1,0 +1,23 @@
+{
+  "name": "dsh-lithium",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Optimizes DSH tool calling, integrating features from various open-source optimization projects with coordinated compatibility adaptation.",
+  "icon": "./icon.png",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "locale/*.json",
+    "modules/*.js",
+    "icon.png"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
