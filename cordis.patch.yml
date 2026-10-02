@@ -2,3 +2,9 @@
     - id: lithium
       name: 'dsh-lithium'
       config: {}
+    # Merged component: session-bound TypeScript REPL for PTC mode.
+    # Declared as a dependency in package.json; this row activates it so a
+    # single `dsh plugin add dsh-lithium` (or npm install) brings it too.
+    - id: ptc-plus
+      name: dsh-ptc-plus
+

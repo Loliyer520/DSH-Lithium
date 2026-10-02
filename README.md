@@ -4,7 +4,7 @@
 
 一个模块化的 DSH Host 插件：把「重复输入的 shell 长命令」沉淀为带参数的命名别名，在工具层面检测重复、主动提示，并提供面向用户与模型两侧的管理入口。
 
-> 图标复用自 Minecraft mod [Lithium（CaffeineMC）](https://github.com/CaffeineMC/lithium-fabric)，其遵循 LGPL-3.0 许可，详见 [NOTICE](NOTICE)。
+> 本项目以 [LGPL-3.0](LICENSE) 发布。图标复用自 Minecraft mod [Lithium（CaffeineMC）](https://github.com/CaffeineMC/lithium-fabric)，其同样遵循 LGPL-3.0 许可，详见 [NOTICE](NOTICE)。
 
 ## 功能模块
 
@@ -17,7 +17,7 @@
 | `repeatDetector` | 监听 shell 工具结果，同一长前缀第 2 次出现时在结果里追加「建议存为别名」提示 |
 | `slashCommand` | 注册 `/alias` 用户斜杠命令，直接在输入框管理别名，无需消耗模型轮次 |
 
-集成组件：`dsh-ptc-plus`（[muyuanjin/dsh-ptc-plus](https://github.com/muyuanjin/dsh-ptc-plus)，会话级 TypeScript REPL，PTC 模式下生效），以独立 bundle 方式协同安装。
+集成组件：`dsh-ptc-plus`（[muyuanjin/dsh-ptc-plus](https://github.com/muyuanjin/dsh-ptc-plus)，会话级 TypeScript REPL，PTC 模式下生效）。它在 `package.json` 中被声明为依赖、并由 `cordis.patch.yml` 插入其行，因此**安装 dsh-lithium 时会自动一并安装并激活**，无需单独安装。
 
 ## 安装
 
